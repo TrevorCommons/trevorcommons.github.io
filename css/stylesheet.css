@@ -19,8 +19,9 @@ nav {
 div.idH {
   background-color: #334;
   padding:100 px 0;
-  outline-width: 2px;
+  outline-width: 5px;
   outline-color: "lightgray";
+  padding-left: 15px;
 }
 
 
