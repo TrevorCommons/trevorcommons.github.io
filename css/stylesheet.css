@@ -11,9 +11,9 @@ body {
 
 /* Header section */
 #idH {
-  background-color: lightgray; /* changed from #333 for visibility */
+  background-color: lightslategray; /* changed from #333 for visibility */
   height: 200px;
-  padding: 20px 40px;          /* spacing inside the header */
+  padding: 10px 40px;          /* spacing inside the header */
   outline: 3px solid gray;     /* visible border */
   box-sizing: border-box;      /* include padding in height */
   display: flex;               /* for vertical centering */
