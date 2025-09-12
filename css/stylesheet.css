@@ -1,5 +1,4 @@
-
-
+/* Reset margins and padding */
 body, h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
   padding: 0;
@@ -10,26 +9,29 @@ body {
   line-height: 1.5;
 }
 
+/* Header section */
+#idH {
+  background-color: lightgray; /* changed from #333 for visibility */
+  height: 200px;
+  padding: 20px 40px;          /* spacing inside the header */
+  outline: 3px solid gray;     /* visible border */
+  box-sizing: border-box;      /* include padding in height */
+  display: flex;               /* for vertical centering */
+  flex-direction: column;
+  justify-content: center;     /* center text vertically */
+}
+
 /* Navigation bar */
 nav {
   background-color: #333;
   padding: 10px 0;
 }
 
-#idH {
-  background-color: #333;
-  height: 200px;
-  padding:20px 20px;
-  outline: 3px solid gray;
-  box-sizing: border-box;
-}
-
-
 /* Horizontal menu using flexbox */
 nav ul.menu {
   list-style: none;
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   padding: 0;
   margin: 0;
 }
@@ -52,19 +54,6 @@ nav ul.menu li a:hover {
   background: #555;
 }
 
-/* Responsive layout for mobile */
-@media (max-width: 768px) {
-  nav ul.menu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul.menu li {
-    margin: 10px 0;
-  }
-}
-
-
 /* Main content */
 main {
   padding: 20px;
@@ -80,6 +69,7 @@ main {
   border-radius: 8px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 10px;
@@ -87,10 +77,15 @@ footer {
 }
 
 /* ===== Mobile Layout ===== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   nav ul.menu {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+  }
+
+  nav ul.menu li {
+    margin: 10px 0;
   }
 
   .project-grid {
