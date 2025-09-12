@@ -17,11 +17,11 @@ nav {
 }
 
 div.idH {
-  background-color: #334;
-  padding:100 px 20;
-  outline-width: 5px;
-  outline-color: lightgray;
-  
+  background-color: lightgray;
+  height: 200px;
+  padding:20px 20px;
+  outline: 3px solid gray;
+  box-sizing: border-box;
 }
 
 
