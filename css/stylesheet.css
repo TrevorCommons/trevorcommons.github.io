@@ -11,7 +11,7 @@ body {
 
 /* Header section */
 #idH {
-  background-color: lightslategray; /* changed from #333 for visibility */
+  background-color: slategray; /* changed from #333 for visibility */
   height: 200px;
   padding: 10px 40px;          /* spacing inside the header */
   outline: 3px solid gray;     /* visible border */
