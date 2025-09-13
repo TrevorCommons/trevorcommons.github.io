@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Website</title>
   <link rel="stylesheet" href="../css/stylesheet.css">
-
-  <!-- jQuery -->
+  
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <!-- jQuery UI JS -->
   <script
     src="https://code.jquery.com/jquery-3.7.1.js"
     integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
 
   <!-- Custom JS -->
-  <!-- <script src="../js/main.js" defer></script>-->
+  <script src="../js/main.js" defer></script>
 </head>
 <body>
 
@@ -44,34 +46,56 @@
       <section id="home" class="home-section">
         <img src="../images/profile.jpg" alt="Trevor Commons" class="profile-img">
         <div class="about-text">
-          <h2>About Me</h2>
+          <h2>Project</h2>
           <p>
             Hi, I'm Trevor Commons. Welcome to my personal website! 
-            This is where I introduce myself and share my journey, skills, and projects. 
-            I am passionate about software development, problem-solving, and building
-            creative solutions that make an impact.
-          </p>
-          <p>
-            Feel free to explore my projects and reach out if you'd like to collaborate
-            or chat about technology.
+            This Section is where I will demonstrate some JavaScript
+            & JQuery dynamic effects. This fun tab is for experimenting and for CSCI 310 Project 1. Without Further ado here are some dynamic effects. 
           </p>
         </div>
       </section>
 
-      <!-- ===== Projects Section ===== -->
-      <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-          <div class="project">
-            <img src="images/project1.png" alt="Project 1">
-            <p>Project description here.</p>
-          </div>
-          <div class="project">
-            <img src="images/project2.png" alt="Project 2">
-            <p>Another project description.</p>
-          </div>
-        </div>
-      </section>
+      <!-- ===== Dynamic Effects Section ===== -->
+<section id="dynamic-effects">
+  <h2>Dynamic Effects Demo</h2>
+  <div id="effects-accordion">
+    <h3>Effect 1: Fade In / Fade Out</h3>
+    <div>
+      <p>This tab will demonstrate fade in and fade out animations using jQuery.</p>
+      <button id="fadeBtn">Click to Fade Toggle</button>
+      <div id="fadeBox" style="width:100px; height:100px; background:lightblue; margin-top:10px;"></div>
+    </div>
+
+    <h3>Effect 2: Slide Toggle</h3>
+    <div>
+      <p>This tab will show slide up and slide down effects.</p>
+      <button id="slideBtn">Click to Slide Toggle</button>
+      <div id="slideBox" style="width:100px; height:100px; background:lightgreen; margin-top:10px;"></div>
+    </div>
+
+    <h3>Effect 3: Animate</h3>
+    <div>
+      <p>This tab will move and resize an element dynamically.</p>
+      <button id="animateBtn">Click to Animate</button>
+      <div id="animateBox" style="width:100px; height:100px; background:orange; position:relative; margin-top:10px;"></div>
+    </div>
+
+    <h3>Effect 4: Hide / Show</h3>
+    <div>
+      <p>This tab will demonstrate hiding and showing content dynamically.</p>
+      <button id="toggleVisibilityBtn">Hide/Show Box</button>
+      <div id="toggleBox" style="width:100px; height:100px; background:purple; margin-top:10px;"></div>
+    </div>
+
+    <h3>Effect 5: Custom Effect</h3>
+    <div>
+      <p>This is a placeholder for a custom effect we'll add later.</p>
+      <button id="customBtn">Trigger Custom Effect</button>
+      <div id="customBox" style="width:100px; height:100px; background:tomato; margin-top:10px;"></div>
+    </div>
+  </div>
+</section>
+
     </main>
 
     
