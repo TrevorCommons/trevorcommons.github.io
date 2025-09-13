@@ -156,6 +156,23 @@ nav ul.menu li a:hover {
   transform: scale(1.05);
 }
 
+/* Base list styling */
+ul {
+  list-style-type: disc; /* Options: disc, circle, square */
+  padding-left: 20px; /* Default outer padding */
+}
+
+/* Nested list styling */
+ul ul {
+  list-style-type: circle;
+  padding-left: 30px; /* Extra indentation for sub-lists */
+}
+
+ul ul ul {
+  list-style-type: square;
+  padding-left: 40px; /* Even deeper indentation */
+}
+
 /* ===== Footer ===== */
 footer {
   background: #f1f1f1;
