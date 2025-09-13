@@ -56,7 +56,7 @@ nav ul.menu li a:hover {
   max-width: 900px;      /* Desktop max width */
   margin: 0 auto;        /* Center content horizontally */
   padding: 0 15px;       /* Small side padding */
-  background: white;     /* Optional: keeps it clean against body background */
+  background: lightpink;     /* Optional: keeps it clean against body background */
   box-sizing: border-box;
 }
 
