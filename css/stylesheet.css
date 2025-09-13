@@ -171,12 +171,36 @@ nav ul.menu li a:hover {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Individual effect boxes inside accordion */
+/* ===== Individual Effect Boxes with Unique Colors ===== */
+#fadeBox {
+  background-color: #e61050;   /* Main red */
+  color: white;
+}
+
+#slideBox {
+  background-color: #0ce8b5;   /* Teal */
+  color: white;
+}
+
+#animateBox {
+  background-color: #ff9f1c;   /* Orange accent */
+  color: white;
+}
+
+#toggleBox {
+  background-color: #3a86ff;   /* Blue accent */
+  color: white;
+}
+
+#customBox {
+  background-color: #8338ec;   /* Purple accent */
+  color: white;
+}
+
+/* Common Box Styling */
 .effect-box {
   padding: 15px;
   margin-bottom: 10px;
-  background-color: #e61050; /* main page background color for pop */
-  color: white;
   border-radius: 8px;
   text-align: center;
   transition: transform 0.2s ease, background 0.3s ease;
@@ -184,7 +208,7 @@ nav ul.menu li a:hover {
 
 .effect-box:hover {
   transform: scale(1.02);
-  background-color: #c50e45; /* slightly darker on hover */
+  filter: brightness(1.1); /* slight brighten on hover */
 }
 
 /* ===== Photo Grid ===== */
