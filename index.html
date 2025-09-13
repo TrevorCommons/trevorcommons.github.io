@@ -5,53 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Website</title>
   <link rel="stylesheet" href="css/stylesheet.css">
+
+  <!-- jQuery -->
   <script
-  src="https://code.jquery.com/jquery-3.7.1.js"
-  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-  crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    
+  <!-- Custom JS -->
   <script src="js/main.js" defer></script>
 </head>
 <body>
 
-  <header>
-    <div id="idH">
-      <h1><strong>Welcome To My Personal Website</strong></h1>
-      <h4>Trevor Commons</h4>
-      <p>Contact Me: commonstrevor@gmail.com</p>
-    </div>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html" data-page="homepage">Home</a></li>
-        <li><a href="project.html" data-page="CSCI310project">Projects</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="contact.html" data-page="contactme" >Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- ===== Wrapper Starts ===== -->
+  <div class="wrapper">
 
-  <main>
-    <section id="home">
-      <h1>Welcome to My Website</h1>
-      <p>This is where I introduce myself.</p>
-    </section>
-
-    <section id="projects">
-      <h2>My Projects</h2>
-      <div class="project-grid">
-        <div class="project">
-          <img src="images/project1.png" alt="Project 1">
-          <p>Project description here.</p>
-        </div>
-        <div class="project">
-          <img src="images/project2.png" alt="Project 2">
-          <p>Another project description.</p>
-        </div>
+    <header>
+      <div id="idH">
+        <h1><strong>Welcome To My Personal Website</strong></h1>
+        <h4>Trevor Commons</h4>
+        <p>Contact Me: commonstrevor@gmail.com</p>
       </div>
-    </section>
-  </main>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" data-page="homepage">Home</a></li>
+          <li><a href="project.html" data-page="CSCI310project">Projects</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="contact.html" data-page="contactme">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 Trevor Commons</p>
-  </footer>
+    <main>
+      <!-- ===== Home / About Section ===== -->
+      <section id="home" class="home-section">
+        <img src="images/profile.jpg" alt="Trevor Commons" class="profile-img">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Hi, I'm Trevor Commons. Welcome to my personal website! 
+            This is where I introduce myself and share my journey, skills, and projects. 
+            I am passionate about software development, problem-solving, and building
+            creative solutions that make an impact.
+          </p>
+          <p>
+            Feel free to explore my projects and reach out if you'd like to collaborate
+            or chat about technology.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== Projects Section ===== -->
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+          <div class="project">
+            <img src="images/project1.png" alt="Project 1">
+            <p>Project description here.</p>
+          </div>
+          <div class="project">
+            <img src="images/project2.png" alt="Project 2">
+            <p>Another project description.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Trevor Commons</p>
+    </footer>
+  </div>
+  <!-- ===== Wrapper Ends ===== -->
+
 </body>
 </html>
