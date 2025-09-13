@@ -11,30 +11,33 @@
     src="https://code.jquery.com/jquery-3.7.1.js"
     integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
-    
+
   <!-- Custom JS -->
   <script src="js/main.js" defer></script>
 </head>
 <body>
 
-  <!-- ===== Wrapper Starts ===== -->
-  <div class="wrapper">
+  <!-- ===== Full-Width Header ===== -->
+  <header>
+    <div id="idH">
+      <h1><strong>Welcome To My Personal Website</strong></h1>
+      <h4>Trevor Commons</h4>
+      <p>Contact Me: commonstrevor@gmail.com</p>
+    </div>
+  </header>
 
-    <header>
-      <div id="idH">
-        <h1><strong>Welcome To My Personal Website</strong></h1>
-        <h4>Trevor Commons</h4>
-        <p>Contact Me: commonstrevor@gmail.com</p>
-      </div>
-      <nav>
-        <ul class="menu">
-          <li><a href="index.html" data-page="homepage">Home</a></li>
-          <li><a href="project.html" data-page="CSCI310project">Projects</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="contact.html" data-page="contactme">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- ===== Full-Width Navigation ===== -->
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html" data-page="homepage">Home</a></li>
+      <li><a href="project.html" data-page="CSCI310project">Projects</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="contact.html" data-page="contactme">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Main Content Wrapper Starts ===== -->
+  <div class="wrapper">
 
     <main>
       <!-- ===== Home / About Section ===== -->
@@ -71,9 +74,11 @@
       </section>
     </main>
 
+    <!-- ===== Footer Inside Wrapper ===== -->
     <footer>
       <p>&copy; 2025 Trevor Commons</p>
     </footer>
+
   </div>
   <!-- ===== Wrapper Ends ===== -->
 
