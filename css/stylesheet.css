@@ -116,6 +116,29 @@ nav ul.menu li a:hover {
   border-radius: 8px;
 }
 
+/* ===== Accordion styles ===== */
+.accordion-header {
+  cursor: pointer;
+  background-color: #ddd;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+.accordion-header:hover {
+  background-color: #ccc;
+}
+
+.accordion-content {
+  display: none; /* hidden by default */
+  padding: 10px;
+  border-left: 2px solid #888;
+  border-bottom: 2px solid #888;
+  margin-bottom: 5px;
+  border-radius: 0 0 4px 4px;
+  background-color: #f9f9f9;
+}
+
 /* ===== Footer ===== */
 footer {
   background: #f1f1f1;
