@@ -4,8 +4,15 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   padding: 0;
 }
 
+/* ===== Body & Flex Layout for Sticky Footer ===== */
+html, body {
+  height: 100%;
+}
+
 body {
-  background-color: lightpink; /* this will show outside the wrapper */
+  display: flex;
+  flex-direction: column;
+  background-color: lightpink; /* area outside the wrapper */
   font-family: Arial, sans-serif;
   line-height: 1.5;
   margin: 0;
@@ -54,13 +61,15 @@ nav ul.menu li a {
 nav ul.menu li a:hover {
   background: #555;
 }
+
 /* ===== Wrapper ===== */
 .wrapper {
   max-width: 900px;      /* Desktop max width */
   margin: 0 auto;        /* Center content horizontally */
   padding: 0 15px;       /* Small side padding */
-  background: white;     /* Optional: keeps it clean against body background */
+  background: white;     /* Content area color */
   box-sizing: border-box;
+  flex: 1;               /* Fills available space to push footer down */
 }
 
 /* ===== Home / About Section ===== */
@@ -109,9 +118,11 @@ nav ul.menu li a:hover {
 
 /* ===== Footer ===== */
 footer {
-  text-align: center;
-  padding: 10px;
   background: #f1f1f1;
+  text-align: center;
+  padding: 15px;
+  flex-shrink: 0; /* ensure footer does not shrink */
+  width: 100%;    /* full-width footer */
 }
 
 /* ===== Mobile Layout ===== */
