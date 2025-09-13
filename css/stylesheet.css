@@ -12,7 +12,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: lightpink; /* area outside the wrapper */
+  background-color: #e61050; /* area outside the wrapper */
   font-family: Arial, sans-serif;
   line-height: 1.5;
   margin: 0;
@@ -21,10 +21,9 @@ body {
 
 /* ===== Header ===== */
 #idH {
-  background-color: slategray;
+  background-color: #0ce8b5;
   height: 200px;
   padding: 10px 40px;
-  outline: 3px solid gray;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -34,7 +33,7 @@ body {
 
 /* ===== Navigation Bar ===== */
 nav {
-  background-color: lightslategray;
+  background-color: #0ce8b5;
   padding: 10px 0;
 }
 
@@ -59,7 +58,7 @@ nav ul.menu li a {
 }
 
 nav ul.menu li a:hover {
-  background: #555;
+  background: rgba(255,255,255,0.3);
 }
 
 /* ===== Wrapper ===== */
@@ -83,7 +82,7 @@ nav ul.menu li a:hover {
   float: left;
   width: 150px;
   height: auto;
-  margin: 0 20px 20px 0; /* space around image */
+  margin: 0 20px 20px 0;
   border-radius: 8px;
   border: 2px solid #ccc;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -91,7 +90,7 @@ nav ul.menu li a:hover {
 
 /* Text next to image */
 .about-text {
-  overflow: hidden; /* ensures wrapping behaves well */
+  overflow: hidden;
 }
 
 .about-text h2 {
@@ -117,9 +116,8 @@ nav ul.menu li a:hover {
 }
 
 /* ===== Accordion styles ===== */
-/* ===== Accordion Base ===== */
 .accordion-header {
-  background: #444;
+  background: #0ce8b5;
   color: white;
   padding: 12px;
   cursor: pointer;
@@ -129,14 +127,13 @@ nav ul.menu li a:hover {
 }
 
 .accordion-content {
-  display: none; /* Hidden by default */
+  display: none;
   padding: 10px;
-  background: #f9f9f9;
-  border-left: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
+  background: #ffffff;
+  border-left: 2px solid #0ce8b5;
+  border-right: 2px solid #0ce8b5;
+  border-bottom: 2px solid #0ce8b5;
 }
-
 
 /* ===== "project" Accordion styles ===== */
 #effects-accordion {
@@ -144,16 +141,17 @@ nav ul.menu li a:hover {
 }
 
 #effects-accordion h3 {
-  background-color: #f4f4f4;
+  background-color: #0ce8b5;
   padding: 10px;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 1px solid #0ce8b5;
   margin: 0;
+  color: white;
 }
 
 #effects-accordion div {
   padding: 15px;
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 
 #effects-accordion button {
@@ -183,23 +181,23 @@ nav ul.menu li a:hover {
 
 /* Base list styling */
 ul {
-  list-style-type: disc; /* Options: disc, circle, square */
-  padding-left: 20px; /* Default outer padding */
+  list-style-type: disc;
+  padding-left: 20px;
 }
 ul li {
   position: relative;
-  padding-left: 20px; /* Space for custom bullet */
+  padding-left: 20px;
 }
 
 /* Nested list styling */
 ul ul {
   list-style-type: circle;
-  padding-left: 30px; /* Extra indentation for sub-lists */
+  padding-left: 30px;
 }
 
 ul ul ul {
   list-style-type: square;
-  padding-left: 40px; /* Even deeper indentation */
+  padding-left: 40px;
 }
 
 /* ===== Footer ===== */
@@ -207,16 +205,16 @@ footer {
   background: #f1f1f1;
   text-align: center;
   padding: 15px;
-  flex-shrink: 0; /* ensure footer does not shrink */
-  width: 100%;    /* full-width footer */
+  flex-shrink: 0;
+  width: 100%;
 }
 
 /* ===== Mobile Layout ===== */
 @media (max-width: 800px) {
 
   .wrapper {
-    max-width: 600px;    /* Mobile max width */
-    padding: 0 10px;     /* Slightly smaller side padding */
+    max-width: 600px;
+    padding: 0 10px;
   }
 
   nav ul.menu {
@@ -229,7 +227,6 @@ footer {
     margin: 10px 0;
   }
 
-  /* Stack image above text on small screens */
   .profile-img {
     float: none;
     display: block;
