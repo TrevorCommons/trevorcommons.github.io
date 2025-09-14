@@ -1,7 +1,6 @@
-//main.js
+// main.js
 
-
-// about code
+// about page accordion
 $(document).ready(function() {
   $(".accordion-header").click(function() {
     // Close any open content except the one clicked
@@ -11,7 +10,6 @@ $(document).ready(function() {
     $(this).next().slideToggle();
   });
 });
-
 
 
 // project.js
@@ -47,8 +45,22 @@ $(document).ready(function() {
     $("#toggleBox").toggle("fast");
   });
 
-  // Effect 5: Custom Placeholder
-  $("#customBtn").click(function() {
-    $("#customBox").css("background", "gold").fadeOut(500).fadeIn(500);
+  // Effect 5: Bounce & Color Cycle
+  $("#bounceColorBtn").click(function() {
+    let box = $("#bounceColorBox");
+
+    // Bounce animation
+    box.animate({ top: "-30px" }, 300)
+       .animate({ top: "0px" }, 300)
+       .animate({ top: "-20px" }, 200)
+       .animate({ top: "0px" }, 200)
+       .animate({ top: "-10px" }, 150)
+       .animate({ top: "0px" }, 150);
+
+    // Color cycle sequence
+    setTimeout(() => box.css("background", "#ff006e"), 200);  // Bright pink
+    setTimeout(() => box.css("background", "#3a86ff"), 600);  // Blue
+    setTimeout(() => box.css("background", "#0ce8b5"), 1000); // Teal
+    setTimeout(() => box.css("background", "#8338ec"), 1400); // Back to original purple
   });
 });

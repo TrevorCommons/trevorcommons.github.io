@@ -159,6 +159,11 @@ nav ul.menu li a:hover {
   padding: 5px 10px;
   cursor: pointer;
 }
+#bounceColorBox {
+  background-color: #8338ec; /* Starting purple */
+  color: white;
+  border-radius: 8px;
+}
 /* ===== Accordion Content Boxes ===== */
 #effects-accordion div {
   padding: 15px;
