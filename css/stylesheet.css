@@ -159,6 +159,7 @@ nav ul.menu li a:hover {
   padding: 5px 10px;
   cursor: pointer;
 }
+
 /* ===== Accordion Content Boxes ===== */
 #effects-accordion div {
   padding: 15px;
@@ -196,12 +197,6 @@ nav ul.menu li a:hover {
   background-color: #8338ec;   /* Purple accent */
   color: white;
 }
-#bounceColorBox {
-  background-color: #8338ec; /* Starting purple */
-  color: white;
-  border-radius: 8px;
-}
-
 
 /* Common Box Styling */
 .effect-box {
@@ -252,7 +247,10 @@ ul ul {
   padding-left: 30px;
 }
 
-
+ul ul ul {
+  list-style-type: square;
+  padding-left: 40px;
+}
 
 /* ===== Footer ===== */
 footer {
@@ -285,6 +283,67 @@ footer {
   transform: translateY(0);
 }
 
+/* ===== FIXED ACCORDION ALIGNMENT ===== */
+
+/* Reset all heading margins globally */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Accordion container cleanup */
+#effects-accordion {
+  margin: 20px auto; /* center nicely */
+  padding: 0; /* remove extra padding */
+  border: none;
+  width: 100%;
+  max-width: 600px; /* keeps it tidy on wide screens */
+  box-sizing: border-box;
+}
+
+/* Accordion header style */
+#effects-accordion > h3.ui-accordion-header {
+  display: block;
+  width: 100%;
+  background-color: #0ce8b5;
+  color: white;
+  padding: 12px 10px;
+  margin: 0; /* ensures no extra space */
+  border: none;
+  font-weight: bold;
+  box-sizing: border-box;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+#effects-accordion > h3.ui-accordion-header:hover {
+  background-color: #09c99c; /* slightly darker hover effect */
+}
+
+/* Accordion content styling */
+#effects-accordion > div.ui-accordion-content {
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+/* Wrapper padding consistency */
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px; /* equal space on all sides */
+  background: white;
+  box-sizing: border-box;
+}
+
+/* Optional: subtle shadow to make accordion pop */
+#effects-accordion {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
 
 /* ===== Mobile Layout ===== */
 @media (max-width: 800px) {
