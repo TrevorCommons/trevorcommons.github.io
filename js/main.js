@@ -11,6 +11,14 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+  $('nav ul.menu li a').each(function() {
+    if(this.href === window.location.href) {
+      $(this).addClass('active');
+    }
+  });
+});
+
 
 // project.js
 $(document).ready(function() {
