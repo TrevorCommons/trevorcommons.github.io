@@ -353,21 +353,26 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 10px;
   }
 
+  nav {
+    max-height: 50px;      /* Limit navbar height */
+    overflow-y: auto;      /* Allow scrolling if needed */
+  }
+
   nav ul.menu {
-    flex-direction: column;
+    flex-direction: row;   /* Change to horizontal for compactness */
+    justify-content: space-around;
     align-items: center;
-    text-align: center;
+    height: 100%;
   }
 
   nav ul.menu li {
-    margin: 10px 0;
+    margin: 0;             /* Remove extra spacing */
+    padding: 0 5px;        /* Add minimal horizontal padding */
   }
 
-  .profile-img {
-    float: none;
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 120px;
+  nav ul.menu li a {
+    font-size: 14px;       /* Adjust font to fit in the smaller bar */
+    padding: 8px 5px;      /* Reduce padding */
   }
 
   .about-text {
