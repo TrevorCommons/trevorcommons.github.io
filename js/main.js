@@ -24,11 +24,12 @@ $(document).ready(function() {
 $(document).ready(function() {
   // Initialize accordion
   $("#effects-accordion").accordion({
-    collapsible: true,
-    heightStyle: "content",
-    active: false
-  });
-
+  collapsible: true,
+  heightStyle: "content",
+  active: false,
+  header: "h3",       // Ensure it targets your headers
+  animate: 200
+});
   // Effect 1: Fade In / Fade Out
   $("#fadeBtn").click(function() {
     $("#fadeBox").fadeToggle("slow");
