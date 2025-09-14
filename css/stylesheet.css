@@ -119,7 +119,7 @@ nav ul.menu li a:hover {
 .accordion-header {
   background: #0ce8b5;
   color: white;
-  padding: 0;
+  padding: 12px;
   cursor: pointer;
   font-weight: bold;
   margin-bottom: 2px;
@@ -159,11 +159,6 @@ nav ul.menu li a:hover {
   padding: 5px 10px;
   cursor: pointer;
 }
-#bounceColorBox {
-  background-color: #8338ec; /* Starting purple */
-  color: white;
-  border-radius: 8px;
-}
 /* ===== Accordion Content Boxes ===== */
 #effects-accordion div {
   padding: 15px;
@@ -201,6 +196,12 @@ nav ul.menu li a:hover {
   background-color: #8338ec;   /* Purple accent */
   color: white;
 }
+#bounceColorBox {
+  background-color: #8338ec; /* Starting purple */
+  color: white;
+  border-radius: 8px;
+}
+
 
 /* Common Box Styling */
 .effect-box {
@@ -251,10 +252,7 @@ ul ul {
   padding-left: 30px;
 }
 
-ul ul ul {
-  list-style-type: square;
-  padding-left: 40px;
-}
+
 
 /* ===== Footer ===== */
 footer {
