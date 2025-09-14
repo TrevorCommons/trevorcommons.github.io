@@ -119,7 +119,7 @@ nav ul.menu li a:hover {
 .accordion-header {
   background: #0ce8b5;
   color: white;
-  padding: 12px;
+  padding: 0;
   cursor: pointer;
   font-weight: bold;
   margin-bottom: 2px;
