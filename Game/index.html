@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top-Down Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui">
+  💎 Gold: <span id="gold">100</span> | 🏰 Castle: <span id="castleHealth">10</span> | 🧟 Wave: <span id="wave">1</span> | Enemies: <span id="enemiesRemaining">0</span>
+        <button id="cameraToggle">Toggle Camera (C)</button>
+        <button id="startRound">Start Round (R)</button>
+  <label style="margin-left:8px; font-size:0.9em;"><input type="checkbox" id="endlessModeCheckbox"> Endless Mode</label>
+  <span id="endlessIndicator" style="margin-left:8px; font-weight:bold; display:none;">Endless ON</span>
+  <button id="pauseBtn" style="margin-left:12px;">Pause (Tab)</button>
+        <div id="waveProgress" style="display:inline-block; vertical-align:middle; margin-left:12px;">
+          <div id="waveProgressBar"></div>
+        </div>
+
+        <div id="towerControls">
+            <button id="selectHealer">Healer Tower</button>
+            <button id="selectMage">Mage Tower</button>
+            <button id="selectArcher">Archer Tower</button>
+        </div>
+
+  <!-- Upgrades panel (open button removed) -->
+        <div id="upgradesPanel" style="display:none;">
+            <h3>Upgrades</h3>
+            <div id="playerUpgrades">Player: <span id="playerUpgradesList">(none)</span></div>
+            <div id="towerUpgrades">Towers: <div id="towerUpgradesList"></div></div>
+            <button id="resetUpgrades">Reset Upgrades</button>
+        </div>
+
+    <!-- Persistent upgrades panel (always visible) -->
+    <div id="persistentUpgrades">
+      <h4>Applied Upgrades</h4>
+      <div>Player: <span id="persistentPlayerUpgradesList">(none)</span></div>
+      <div style="margin-top:8px;">Towers:</div>
+      <div id="persistentTowersList"></div>
+    </div>
+
+        <!-- Inventory panel (hidden by default) -->
+        <div id="inventoryPanel" class="inventory-panel">
+            <h4>Inventory</h4>
+            <div id="inventoryList">(empty)</div>
+            <div style="margin-top:8px; text-align:right;">
+              <button id="inventoryClear">Clear</button>
+            </div>
+        </div>
+
+        <!-- Loot apply modal -->
+        <div id="lootModal" style="display:none;">
+            <div id="lootModalContent">
+                <h4 id="lootTitle">Apply Upgrade</h4>
+                <div id="lootTowerList">Choose a tower to apply this upgrade:</div>
+                <button id="lootCancel">Cancel</button>
+            </div>
+        </div>
+    </div> <!-- end #ui -->
+
+    <!-- Pause overlay -->
+    <div id="pauseOverlay" style="display:none; position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(0,0,0,0.7); z-index:10000; align-items:center; justify-content:center;">
+      <div style="background:#111; color:white; padding:20px; border-radius:8px; text-align:center;">
+        <h2>Game Paused</h2>
+        <button id="resumeBtn">Resume</button>
+        <button id="endGameBtn" style="margin-left:8px;">End / Reset Game</button>
+      </div>
+    </div>
+
+    <!-- Player Health Bar -->
+    <div id="health-container">
+      <div id="health-bar"></div>
+    </div>
+
+    <!-- Crosshair for first-person -->
+    <div id="crosshair" style="display:none;">+</div>
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Start Menu -->
+    <div id="startMenu">
+      <div id="startMenuContent">
+        <h1>Defend the Castle</h1>
+        <p>Protect your castle from incoming enemies. Upgrades reset each new game.</p>
+        <button id="startGameBtn">Start Game</button>
+      </div>
+    </div>
+    
+      <!-- Import map to load Three.js as an ES module -->
+      <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.module.js",
+          "OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.159.0/examples/jsm/controls/OrbitControls.js"
+        }
+      }
+    </script>
+    <!-- main.js is now a module -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>

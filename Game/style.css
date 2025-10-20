@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#ui { 
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #333333; /* dark grey for non-modal UI text */
+    font-family: sans-serif;
+    z-index: 10;
+}
+
+/* Make non-modal UI text more prominent */
+#ui, #upgradesPanel, #persistentUpgrades, .inventory-hud, .game-toast, #crosshair, #enemiesRemaining {
+    font-weight: 600;
+}
+
+/* Endless mode indicator should be reddish */
+#endlessIndicator {
+    color: #ff3b30 !important; /* stronger reddish, important to override inline or other rules */
+    font-weight: 800;
+    text-shadow: 0 0 6px rgba(255,59,48,0.4);
+}
+
+#enemiesRemaining {
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Wave progress bar */
+#waveProgress {
+    width: 160px;
+    height: 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 6px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+#waveProgressBar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg,#ff7b7b,#ffd27b);
+    border-radius: 6px;
+    transition: width 0.25s linear;
+}
+
+/* pulse effect when wave spawns */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+.pulse {
+    animation: pulse 350ms ease;
+}
+
+#crosshair {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #333333;
+    font-size: 28px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Upgrades panel */
+#upgradesPanel {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 220px;
+    background: rgba(0,0,0,0.6);
+    color: #333333;
+    padding: 8px;
+    border-radius: 6px;
+    z-index: 25;
+}
+#upgradesPanel h3 { margin: 0 0 6px 0; }
+#towerUpgradesList { max-height: 180px; overflow-y: auto; margin-top: 6px; }
+
+/* Persistent applied upgrades panel */
+#persistentUpgrades {
+    position: absolute;
+    left: 10px;
+    top: 70px; /* below main UI */
+    width: 280px;
+    background: rgba(0,0,0,0.55);
+    color: white; /* applied upgrades text should be white */
+    padding: 8px;
+    border-radius: 6px;
+    z-index: 30;
+    font-size: 13px;
+}
+#persistentTowersList { max-height: 160px; overflow-y: auto; margin-top:6px; }
+#persistentTowersList div { padding: 4px 6px; border-radius:4px; background: rgba(255,255,255,0.02); margin-bottom:4px; }
+
+/* Start menu */
+#startMenu {
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+#startMenuContent { background:#222; color:white; padding: 24px; border-radius: 8px; text-align:center; width: 360px; }
+#startMenuContent h1 { margin: 0 0 8px 0; font-size: 26px; }
+#startMenuContent p { font-size: 14px; color: #ddd; }
+#startMenuContent button { margin-top: 12px; padding: 8px 16px; font-size: 16px; }
+
+/* Game over overlay (improve look) */
+#gameOverOverlay { display:flex; align-items:center; justify-content:center; flex-direction:column; }
+#gameOverOverlay button { margin-top: 16px; padding: 8px 14px; }
+
+/* tower button selected state while awaiting placement */
+.tower-btn-selected {
+    background: #4caf50 !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+#lootModal {
+        /* Anchor modal to top-right so it doesn't block central UI controls like Start Round */
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        z-index: 60;
+        background: transparent; /* remove full-screen overlay to avoid covering UI */
+}
+#lootModalContent { background: #222; color: white; padding: 12px; border-radius: 8px; width: 320px; box-shadow: 0 6px 20px rgba(0,0,0,0.6); }
+
+/* On very small screens, make modal narrower */
+@media (max-width: 480px) {
+    #lootModalContent { width: 90vw; }
+}
+#lootTowerList { max-height: 220px; overflow-y: auto; margin: 8px 0; }
+#lootTowerList button { display:block; width:100%; margin-bottom:6px; }
+
+/* Inventory HUD (compact) and panel styles */
+.inventory-hud {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    background: rgba(0,0,0,0.45);
+    color: white; /* inventory HUD text should be white */
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    z-index: 1200;
+    cursor: pointer;
+}
+
+.inventory-panel {
+    display: none;
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    width: 260px;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1300;
+}
+.inventory-panel h4 { margin: 0 0 8px 0; font-size: 14px; }
+.inventory-panel .inv-row { margin-bottom: 6px; display:flex; align-items:center; justify-content:space-between; }
+.inventory-panel button { font-size: 12px; }
+
+/* Toast notifications */
+.game-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 14%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    z-index: 1500;
+    opacity: 1;
+    transition: opacity 220ms ease;
+}
+
+#health-container {
+    position: fixed;
+    bottom: 30px;       /* distance from bottom of screen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 25px;
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;      /* make sure it’s above the 3D canvas */
+  }
+  
+  #health-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #59ff00; 
+    transition: width 0.25s ease;
+  }
+  
