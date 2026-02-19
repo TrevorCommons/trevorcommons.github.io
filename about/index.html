@@ -1,132 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
-  <link rel="stylesheet" href="../css/stylesheet.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
 
-  <!-- jQuery -->
-  <script
-    src="https://code.jquery.com/jquery-3.7.1.js"
-    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Custom JS -->
-  <script src="../js/main.js" defer></script>
-</head>
-<body>
-
-  <!-- ===== Full-Width Header ===== -->
-  <header>
-    <div id="idH">
-      <h1><strong>Welcome To My Personal Website</strong></h1>
-      <h4>Trevor Commons</h4>
-      <p>Contact Me: commonstrevor@gmail.com</p>
-    </div>
-  </header>
-
-  <!-- ===== Full-Width Navigation ===== -->
-  <nav>
-    <ul class="menu">
-      <li><a href="../">Home</a></li>
-      <li><a href="../project">Project</a></li>
-      <li><a href="../about">About Me</a></li>
-      <li><a href="../contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- ===== Main Content Wrapper Starts ===== -->
-  <div class="wrapper">
+    <!-- Custom JS -->
+    <script src="../js/main.js" defer></script>
+    <script src="../js/onclick.js"></script>
+  </head>
+  <body>
+    <!-- ===== Full-Width Navigation ===== -->
+    <nav id="desktop-nav">
+      <div class="logo">Trevor Commons</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/project">Project</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/experience">Experience</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/Game/index.html">Game</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Mobile Nav-->
+    <nav id="hamburger-nav">
+      <div class="logo">Trevor Commons</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <ul>
+            <li><a href="/" onclick="toggleMenu()">Home</a></li>
+            <li><a href="/project" onclick="toggleMenu()">Project</a></li>
+            <li><a href="/about" onclick="toggleMenu()">About</a></li>
+            <li><a href="/contact" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="/Game/index.html" onclick="toggleMenu()">Game</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <main>
       <!-- ===== Home / About Section ===== -->
-      <section id="home" class="home-section">
-        <img src="../images/profile.jpg" alt="Trevor Commons" class="profile-img">
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p>
-            Hi, I'm Trevor Commons. Welcome to my personal website! 
-            I'm a Computer Science Major at the University of Indianapolis currently in my senior year of college looking to graduate in May of 2026. This is where I introduce myself and share my journey, skills, and projects. I am passionate about software development, problem-solving, and building creative solutions that make an impact.
-          </p>
-          <p>
-            Feel free to explore my projects and reach out if you'd like to collaborate
-            or chat about technology.
-          </p>
-        </div>
-      </section>
+      <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section_pic-container">
+            <img
+              src="../images/profile.jpg"
+              alt="Trevor Commons"
+              class="about-pic"
+            />
+          </div>
 
-      <!-- ===== Projects Section ===== -->
-      <div class="accordion">
-        <h3 class="accordion-header" tabindex="0">Hobbies</h3>
-        <div class="accordion-content">
-          <ul>
-            <li>Coding side projects</li>
-            <li>Watching Youtube videos</li>
-            <li>Streaming movies</li>
-            <li>Working out at the gym with friends</li>
-            <li>Hiking trails and state parks with friends</li>
-            <div class="gallery-grid">
-              <img src="../images/friends.jpeg" alt="Hiking with friends">
-              <img src="../images/friends2.jpeg" alt="Hiking with friends">
-              <img src="../images/friends3.jpeg" alt="Hiking with friends">
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="../images/experience.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <h3>Experience</h3>
+                <p>
+                  2+ years <br />
+                  Software Development
+                </p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="../images/education.png"
+                  alt="Education Icon"
+                  class="icon"
+                />
+                <h3>Education</h3>
+                <p>
+                  Bachelor's in Computer Science <br />
+                  University of Indianapolis
+                </p>
+              </div>
             </div>
-            <li>Gaming and puzzles:</li>
-            <ul>
-              <li>Casually play chess</li>
-              <li>Play solo video games</li>
-              <li>Play multiplayer video games</li>
-            </ul>
-            <li>Sleeping in</li>
-          </ul>
-        </div>
-
-        <h3 class="accordion-header" tabindex="0">Skills</h3>
-        <div class="accordion-content">
-          <ul>
-            <li>Coding:</li>
-            <ul>
-              <li>Python</li>
-              <li>C & C++</li>
-              <li>JavaScript</li>
-              <li>Jquery</li>
-              <li>SQL Syntax</li>
-              <li>HTML Syntax</li>
-              <li>CSS</li>
-              <li>PHP</li>
-            </ul>
-            <li>Software Experience:</li>
-            <ul>
-              <li>Excel</li>
-              <li>Docker</li>
-              <li>TensorFlow</li>
-              <li>Git</li>
-            </ul>
-          </ul>
-        </div>
-
-        <h3 class="accordion-header" tabindex="0">Other Interests</h3>
-        <div class="accordion-content">
-          <p>Traveling, eating, and exploring new technologies.</p>
-          <div class="gallery-grid">
-            <img src="../images/eiffel.jpeg" alt="Below the Eiffel Tower in Paris, France">
-            <img src="../images/venice.jpeg" alt="On a gondola in Venice, Italy">
-            <img src="../images/pasta.jpeg" alt="Seafood Pasta from Venice">
-            <img src="../images/arcdetriumph.jpeg" alt="Under L'Arc de Triumph">
+            <div class="text-container">
+              <p>
+                Hi, I'm Trevor Commons. Welcome to my personal website! I'm a
+                Computer Science Major at the University of Indianapolis
+                currently in my senior year of college looking to graduate in
+                May of 2026. This is where I introduce myself and share my
+                journey, skills, and projects. I am passionate about software
+                development, problem-solving, and building creative solutions
+                that make an impact. Feel free to explore my projects and reach
+                out if you'd like to collaborate or chat about technology.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+
+        <!-- ===== Projects Section ===== -->
+        <div class="accordion">
+          <h3 class="accordion-header" tabindex="0">Hobbies</h3>
+          <div class="accordion-content">
+            <ul>
+              <li>Coding side projects</li>
+              <li>Watching Youtube videos</li>
+              <li>Streaming movies</li>
+              <li>Working out at the gym with friends</li>
+              <li>
+                Hiking trails and state parks with friends
+                <div class="gallery-grid">
+                  <img src="../images/friends.jpeg" alt="Hiking with friends" />
+                  <img
+                    src="../images/friends2.jpeg"
+                    alt="Hiking with friends"
+                  />
+                  <img
+                    src="../images/friends3.jpeg"
+                    alt="Hiking with friends"
+                  />
+                </div>
+              </li>
+              <li>
+                Gaming and puzzles:
+                <ul>
+                  <li>Casually play chess</li>
+                  <li>Play solo video games</li>
+                  <li>Play multiplayer video games</li>
+                </ul>
+              </li>
+              <li>Sleeping in</li>
+            </ul>
+          </div>
+
+          <h3 class="accordion-header" tabindex="0">Skills</h3>
+          <div class="accordion-content">
+            <ul>
+              <li>
+                Coding:
+                <ul>
+                  <li>Python</li>
+                  <li>C & C++</li>
+                  <li>JavaScript</li>
+                  <li>Jquery</li>
+                  <li>SQL Syntax</li>
+                  <li>HTML Syntax</li>
+                  <li>CSS</li>
+                  <li>PHP</li>
+                </ul>
+              </li>
+              <li>
+                Software Experience:
+                <ul>
+                  <li>Excel</li>
+                  <li>Docker</li>
+                  <li>TensorFlow</li>
+                  <li>Git</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="accordion-header" tabindex="0">Other Interests</h3>
+          <div class="accordion-content">
+            <p>Traveling, eating, and exploring new technologies.</p>
+            <div class="gallery-grid">
+              <img
+                src="../images/eiffel.jpeg"
+                alt="Below the Eiffel Tower in Paris, France"
+              />
+              <img
+                src="../images/venice.jpeg"
+                alt="On a gondola in Venice, Italy"
+              />
+              <img src="../images/pasta.jpeg" alt="Seafood Pasta from Venice" />
+              <img
+                src="../images/arcdetriumph.jpeg"
+                alt="Under L'Arc de Triumph"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       <div>
-        <br>
+        <br />
       </div>
     </main>
-  </div>
-  <!-- ===== Wrapper Ends ===== -->
 
-  <!-- ===== Footer Outside Wrapper ===== -->
-  <footer>
+    <!-- ===== Footer Outside Wrapper ===== -->
+    <footer>
       <p>&copy; 2025 Trevor Commons</p>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>

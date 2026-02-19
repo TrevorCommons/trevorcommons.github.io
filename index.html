@@ -1,75 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
-  <link rel="stylesheet" href="css/stylesheet.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
 
-   <!-- jQuery UI CSS -->
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-  <!-- jQuery UI JS -->
-  <script
-    src="https://code.jquery.com/jquery-3.7.1.js"
-    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- jQuery UI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <!-- jQuery UI JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-  <!-- Custom JS -->
-  <!-- <script src="js/main.js" defer></script>-->
-</head>
-<body>
-
-  <!-- ===== Full-Width Header ===== -->
-  <header>
-    <div id="idH">
-      <h1><strong>Welcome To My Personal Website</strong></h1>
-      <h4>Trevor Commons</h4>
-      <p>Contact Me: commonstrevor@gmail.com</p>
-    </div>
-  </header>
-
-  <!-- ===== Full-Width Navigation ===== -->
-  <nav>
-    <ul class="menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/project">Project</a></li>
-      <li><a href="/about">About Me</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/Game/index.html">Game</a></li>
-    </ul>
-  </nav>
-
-  <!-- ===== Main Content Wrapper Starts ===== -->
-  <div class="wrapper">
+    <!-- Custom JS -->
+    <script src="js/onclick.js"></script>
+  </head>
+  <body>
+    <!-- ===== Full-Width Navigation ===== -->
+    <nav id="desktop-nav">
+      <div class="logo">Trevor Commons</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/project">Project</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/Game/index.html">Game</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Mobile Nav-->
+    <nav id="hamburger-nav">
+      <div class="logo">Trevor Commons</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <ul>
+            <li><a href="/" onclick="toggleMenu()">Home</a></li>
+            <li><a href="/project" onclick="toggleMenu()">Project</a></li>
+            <li><a href="/about" onclick="toggleMenu()">About</a></li>
+            <li><a href="/contact" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="/Game/index.html" onclick="toggleMenu()">Game</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <main>
-      <!-- ===== Home / About Section ===== -->
-      <section id="home" class="home-section">
-        <img src="../images/profile.jpg" alt="Trevor Commons" class="profile-img">
-        <div class="about-text">
-          <h2>Welcome!</h2>
-          <p>
-            Hi, I'm Trevor Commons. Welcome to my personal website! 
-            I'm a Computer Science Major at the University of Indianapolis currently in my senior year of college looking to graduate in May of 2026. This is where I introduce myself and share my journey, skills, and projects. I am passionate about software development, problem-solving, and building creative solutions that make an impact.
-          </p>
-          <p>
-            Feel free to explore my projects and reach out if you'd like to collaborate
-            or chat about technology.
-          </p>
+      <!-- ===== Home Section ===== -->
+      <section id="home">
+        <div class="section_pic-container">
+          <img src="images/profile.jpg" alt="Trevor Commons profile picture" />
+        </div>
+
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Trevor Commons</h1>
+          <p class="section__text__p2">Software Developer</p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color2"
+              onclick="window.open('images/resume.pdf')"
+            >
+              View Resume
+            </button>
+            <button class="btn btn-color1" onclick="location.href = '/contact'">
+              Contact
+            </button>
+          </div>
+          <div class="socials-container">
+            <img
+              src="images/linkedin.png"
+              alt="LinkedIn"
+              class="icon"
+              onclick="
+                location.href = 'https://www.linkedin.com/in/trevor-commons/'
+              "
+            />
+            <img
+              src="images/github.png"
+              alt="GitHub"
+              class="icon"
+              onclick="location.href = 'https://github.com/trevorcommons'"
+            />
+          </div>
         </div>
       </section>
       <div>
-        <br>
+        <br />
       </div>
     </main>
-  </div>
-  <!-- ===== Wrapper Ends ===== -->
 
-  <!-- ===== Footer Outside Wrapper ===== -->
-  <footer>
+    <!-- ===== Footer Outside Wrapper ===== -->
+    <footer>
       <p>&copy; 2025 Trevor Commons</p>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>

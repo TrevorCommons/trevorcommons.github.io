@@ -1,74 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
-  <link rel="stylesheet" href="../css/stylesheet.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mediaqueries.css" />
 
-  <!-- jQuery -->
-  <script
-    src="https://code.jquery.com/jquery-3.7.1.js"
-    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Custom JS -->
-  <!-- <script src="../js/main.js" defer></script>-->
-</head>
-<body>
+    <!-- Custom JS -->
+    <script src="js/onclick.js"></script>
+  </head>
+  <body>
+    <!-- ===== Full-Width Navigation ===== -->
+    <nav id="desktop-nav">
+      <div class="logo">Trevor Commons</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/project">Project</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/Game/index.html">Game</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Mobile Nav-->
+    <nav id="hamburger-nav">
+      <div class="logo">Trevor Commons</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <ul>
+            <li><a href="/" onclick="toggleMenu()">Home</a></li>
+            <li><a href="/project" onclick="toggleMenu()">Project</a></li>
+            <li><a href="/about" onclick="toggleMenu()">About</a></li>
+            <li><a href="/contact" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="/Game/index.html" onclick="toggleMenu()">Game</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <!-- ===== Full-Width Header ===== -->
-  <header>
-    <div id="idH">
-      <h1><strong>Welcome To My Personal Website</strong></h1>
-      <h4>Trevor Commons</h4>
-      <p>Contact Me: commonstrevor@gmail.com</p>
-    </div>
-  </header>
-
-  <!-- ===== Full-Width Navigation ===== -->
-  <nav>
-    <ul class="menu">
-      <li><a href="../">Home</a></li>
-      <li><a href="../project">Project</a></li>
-      <li><a href="../about">About Me</a></li>
-      <li><a href="../contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- ===== Main Content Wrapper Starts ===== -->
-  <div class="wrapper">
-
-    <main>
-      <!-- ===== Contact Section ===== -->
-      <section id="home" class="home-section">
-        <img src="../images/profile.jpg" alt="Trevor Commons" class="profile-img">
-        <div class="about-text">
-          <h2>Connect with Me!</h2>
+    <!-- ===== Contact Section ===== -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="../images/email.png"
+            alt="Email Icon"
+            class="icon contact-icon email-icon"
+          />
           <p>
-            Hi, I'm Trevor Commons. Welcome to my personal website! 
-            You can contact me at my business email <strong> commonstrevor@gmail.com</strong> or find me on <strong>LinkedIn </strong> <a href="https://www.linkedin.com/in/trevor-commons-4251b9270?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3ByNXlg43nTZSWR67avd8xOA%3D%3D" target="_blank" rel="noopener noreferrer">here</a>. You can also find me on <strong>GitHub</strong> <a href="http://github.com/TrevorCommons" target="_blank" rel="noopener noreferrer">here</a>
-          </p>
-          <p>
-            Feel free to explore my projects and reach out if you'd like to collaborate or chat about technology.
+            <a href="mailto:commonstrevor@gmail.com">commonstrevor@gmail.com</a>
           </p>
         </div>
-      </section>
-      <div>
-        <br>
+        <div class="contact-info-container">
+          <img
+            src="../images/linkedin.png"
+            alt="LinkedIn Icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a
+              href="https://www.linkedin.com/in/trevor-commons/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+        <h2>Connect with Me!</h2>
+        <p>
+          Hi, I'm Trevor Commons. Welcome to my personal website! You can
+          contact me at my business email
+          <strong> commonstrevor@gmail.com</strong> or find me on
+          <strong>LinkedIn </strong>
+          <a
+            href="https://www.linkedin.com/in/trevor-commons-4251b9270?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3ByNXlg43nTZSWR67avd8xOA%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            >here</a
+          >. You can also find me on <strong>GitHub</strong>
+          <a
+            href="http://github.com/TrevorCommons"
+            target="_blank"
+            rel="noopener noreferrer"
+            >here</a
+          >
+        </p>
+        <p>
+          Feel free to explore my projects and reach out if you'd like to
+          collaborate or chat about technology.
+        </p>
       </div>
-    </main>
+    </section>
+    <div>
+      <br />
+    </div>
 
-    
-    
-
-  </div>
-  <!-- ===== Wrapper Ends ===== -->
-
-  <!-- ===== Footer Outside Wrapper ===== -->
-  <footer>
-      <p>&copy; 2025 Trevor Commons</p>
-  </footer>
-
-</body>
+    <!-- ===== Footer  ===== -->
+    <footer>
+      <p>Copyright &copy; 2026 Trevor Commons. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>

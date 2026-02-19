@@ -1,0 +1,651 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* ===== Body & Flex Layout for Sticky Footer ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+p {
+  color: rgb(80, 80, 80);
+}
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+/* ===== Navigation Bar ===== */
+nav,
+.nav-links {
+  display: flex;
+}
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+.logo {
+  font-size: 2rem;
+}
+.logo:hover {
+  cursor: default;
+}
+/* ===== Hamburger  ===== */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+.hamburger-icon span:first-child {
+  transform: none;
+}
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* ===== Sections ===== */
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* ===== Home Section ===== */
+#home {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80 vh;
+}
+
+.section_pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+.section__text__p1 {
+  text-align: center;
+}
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ===== Icons ===== */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* ===== Buttons ===== */
+
+.btn-containter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color1,
+.btn-color2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+.btn-color1:hover,
+.btn-color2:hover {
+  cursor: pointer;
+}
+.btn-color1,
+.btn-color2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+.btn-color1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color2 {
+  background: none;
+}
+.btn-color2:hover {
+  background: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-containter {
+  gap: 1rem;
+}
+
+/* ===== About Section ===== */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section_pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* ===== Accordion styles ===== */
+
+.accordion-header {
+  background: rgb(53, 53, 53);
+  color: white;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+  border: none;
+}
+
+.accordion-header:hover,
+.accordion-header:focus {
+  background: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+
+.accordion-content {
+  display: none;
+  padding: 1.2rem 1.5rem;
+  background: #fff;
+  color: #353535;
+  border-radius: 0 0 2rem 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-top: none;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* ===== Experience Section ===== */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* ===== Project Section ===== */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* ===== "project" Accordion styles ===== */
+#effects-accordion {
+  margin-top: 20px;
+}
+
+#effects-accordion h3 {
+  background-color: #0ce8b5;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #0ce8b5;
+  margin: 0;
+  color: white;
+}
+
+#effects-accordion div {
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+#effects-accordion button {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* ===== Accordion Content Boxes ===== */
+#effects-accordion div {
+  padding: 15px;
+  background-color: white; /* inside wrapper look */
+  border-left: 3px solid #0ce8b5; /* matches header/menu */
+  border-right: 3px solid #0ce8b5;
+  border-bottom: 3px solid #0ce8b5;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Individual Effect Boxes with Unique Colors ===== */
+#fadeBox {
+  background-color: #e61050; /* Main red */
+  color: white;
+}
+
+#slideBox {
+  background-color: #0ce8b5; /* Teal */
+  color: white;
+}
+
+#animateBox {
+  background-color: #ff9f1c; /* Orange accent */
+  color: white;
+}
+
+#toggleBox {
+  background-color: #3a86ff; /* Blue accent */
+  color: white;
+}
+
+#customBox {
+  background-color: #8338ec; /* Purple accent */
+  color: white;
+}
+
+/* Common Box Styling */
+.effect-box {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    background 0.3s ease;
+}
+
+.effect-box:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1); /* slight brighten on hover */
+}
+
+/* ===== Contact Section ===== */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+/* ===== Photo Grid ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Base list styling */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+ul li {
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Nested list styling */
+ul ul {
+  list-style-type: circle;
+  padding-left: 30px;
+}
+
+ul ul ul {
+  list-style-type: square;
+  padding-left: 40px;
+}
+
+/* ===== Footer ===== */
+footer {
+  height: 10vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+  color: rgb(80, 80, 80);
+}
+
+/* ===== Accordion Buttons ===== */
+#effects-accordion button {
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  background-color: #0ce8b5; /* button background matches header/menu */
+  color: white; /* text color */
+  border: none;
+  border-radius: 5px;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+#effects-accordion button:hover {
+  background-color: #08c2a0; /* slightly darker on hover */
+  transform: translateY(-2px);
+}
+
+#effects-accordion button:active {
+  background-color: #06a88f; /* even darker when clicked */
+  transform: translateY(0);
+}
+
+/* ===== FIXED ACCORDION ALIGNMENT ===== */
+
+/* Reset all heading margins globally */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Accordion container cleanup */
+#effects-accordion {
+  margin: 20px auto; /* center nicely */
+  padding: 0; /* remove extra padding */
+  border: none;
+  width: 100%;
+  max-width: 600px; /* keeps it tidy on wide screens */
+  box-sizing: border-box;
+}
+
+/* Accordion header style */
+#effects-accordion > h3.ui-accordion-header {
+  display: block;
+  width: 100%;
+  background-color: #0ce8b5;
+  color: white;
+  padding: 12px 10px;
+  margin: 0; /* ensures no extra space */
+  border: none;
+  font-weight: bold;
+  box-sizing: border-box;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+#effects-accordion > h3.ui-accordion-header:hover {
+  background-color: #09c99c; /* slightly darker hover effect */
+}
+
+/* Accordion content styling */
+#effects-accordion > div.ui-accordion-content {
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+/* Optional: subtle shadow to make accordion pop */
+#effects-accordion {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
