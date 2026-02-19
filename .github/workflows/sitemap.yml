@@ -17,7 +17,7 @@ jobs:
         with:
           base-url: "https://trevorcommons.github.io"
           output-file: "sitemap.xml"
-          ignore-files: "js/*,css/*,images/*,Game/*,project/*"
+          ignore-files: "js/*,css/*,images/*,Game/*"
 
       - name: Commit sitemap
         run: |
