@@ -3,7 +3,6 @@
 # Allow all well-behaved search engines to crawl the main site
 User-agent: *
 Disallow: /Game/
-Disallow: /project/
 Disallow: /js/
 Disallow: /css/
 Disallow: /images/
