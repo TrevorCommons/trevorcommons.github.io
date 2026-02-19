@@ -30,7 +30,7 @@ jobs:
           echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
 
       - name: Upload sitemap artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6.0.0
         with:
           name: sitemap
           path: sitemap.xml
