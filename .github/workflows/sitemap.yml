@@ -26,5 +26,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add sitemap.xml
-          git commit -m "Auto‑generated sitemap" || echo "No changes to commit"
+          git diff-index --quiet HEAD || git commit -m "Auto-generated sitemap"
           git push
