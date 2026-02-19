@@ -50,6 +50,14 @@
 }
 
 @media screen and (max-width: 600px) {
+  .contact-info-upper-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-text {
+    text-align: center;
+  }
   #contact,
   footer {
     height: fit-content;
