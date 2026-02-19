@@ -1,0 +1,12 @@
+# Robots.txt for Trevor Commons GitHub Pages site
+
+# Allow all well-behaved search engines to crawl the main site
+User-agent: *
+Disallow: /Game/
+Disallow: /project/
+Disallow: /js/
+Disallow: /css/
+Disallow: /images/
+
+# Optional: Sitemap reference for search engines
+Sitemap: https://trevorcommons.github.io/sitemap.xml
