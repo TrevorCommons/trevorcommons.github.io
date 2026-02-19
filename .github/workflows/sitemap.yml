@@ -17,7 +17,7 @@ jobs:
 
       - name: Generate the sitemap
         id: sitemap
-        uses: cicirello/generate-sitemap@v1
+        uses: cicirello/generate-sitemap@v1.10.1
         with:
           base-url-path: https://trevorcommons.github.io/
 
