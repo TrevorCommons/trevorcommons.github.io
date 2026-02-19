@@ -379,6 +379,7 @@ article {
   border: rgb(163, 163, 163) 0.1rem solid;
   border-top: none;
   margin-bottom: 1.2rem;
+  display: none;
 }
 
 /* Buttons Inside Accordion */
