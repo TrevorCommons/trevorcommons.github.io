@@ -3,28 +3,23 @@ name: Generate Sitemap
 on:
   push:
     branches:
-      - main
+      - main # or 'master' depending on your repo
 
 jobs:
   sitemap:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Generate sitemap
-        id: sitemap
-        uses: cicirello/generate-sitemap@v1.10.4
+        uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://trevorcommons.github.io
-
-      - name: Commit sitemap
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add sitemap.xml
-          git diff-index --quiet HEAD || git commit -m "Auto-generated sitemap"
-          git push
+          # include project folder in sitemap
+          include-paths: /
+          # optional: exclude non-page assets like JS/CSS/images
+          exclude-paths: /js /css /images
