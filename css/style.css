@@ -41,6 +41,9 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  position: relative;
+  z-index: 1000;
+  background: white;
 }
 
 .nav-links {
@@ -106,6 +109,7 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  z-index: 2000;
 }
 
 .menu-links a {
