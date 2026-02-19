@@ -2,23 +2,27 @@ name: Generate Sitemap
 
 on:
   push:
-    branches:
-      - main # or 'master' depending on your repo
+    branches: [main]
 
 jobs:
-  sitemap:
+  sitemap_job:
     runs-on: ubuntu-latest
+    name: Generate a sitemap
 
     steps:
-      - name: Checkout repository
+      - name: Checkout the repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Generate sitemap
+      - name: Generate the sitemap
+        id: sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url-path: https://trevorcommons.github.io
-          path-to-root: ./
-          # optional: exclude non-page assets like JS/CSS/images
-          exclude-paths: /js /css /images
+          base-url-path: https://THE.URL.TO.YOUR.PAGE/
+
+      - name: Output stats
+        run: |
+          echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
+          echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
+          echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
