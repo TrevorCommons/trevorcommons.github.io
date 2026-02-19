@@ -19,7 +19,6 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://trevorcommons.github.io
-          # include project folder in sitemap
-          include-paths: /
+          path-to-root: ./
           # optional: exclude non-page assets like JS/CSS/images
           exclude-paths: /js /css /images
