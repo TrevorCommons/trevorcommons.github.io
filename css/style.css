@@ -351,7 +351,7 @@ article {
 }
 
 /* Accordion Headers */
-#effects-accordion > h3 {
+#effects-accordion h2 {
   background: rgb(53, 53, 53);
   color: white;
   padding: 1.2rem 1.5rem;
@@ -363,12 +363,12 @@ article {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-#effects-accordion > h3:hover {
+#effects-accordion h2:hover {
   background: rgb(0, 0, 0);
 }
 
 /* Accordion Content */
-#effects-accordion > div {
+#effects-accordion div {
   padding: 1.2rem 1.5rem;
   background: white;
   border-radius: 0 0 2rem 2rem;

@@ -49,7 +49,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   #contact,
   footer {
     height: 83vh;
