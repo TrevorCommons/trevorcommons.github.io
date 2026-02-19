@@ -1,0 +1,28 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main # or 'master', depending on your default branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate Sitemap
+        uses: crazy-max/sitemap-action@v2
+        with:
+          base-url: "https://trevorcommons.github.io"
+          output-file: "sitemap.xml"
+          ignore-files: "js/*,css/*,images/*,Game/*,project/*"
+
+      - name: Commit sitemap
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "Update sitemap" || echo "No changes to commit"
+          git push
